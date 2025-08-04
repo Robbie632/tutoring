@@ -16,7 +16,7 @@ loadQuizzes();
  * Variables are containers for storing data values.
  * In modern JavaScript, we primarily use `let` and `const`.
  */
-debugger
+
 let variablesContainerNameElement = document.querySelector('#variables-container > #name')
 // `let`: Used for variables whose values might change.
 let userName = "Alice";
@@ -88,30 +88,8 @@ fourthComparisonElement.textContent = fourthComparison
 
 
 
-// Logical Operators: && (AND), || (OR), ! (NOT)
-console.log("\n--- SECTION 2: Logical Operators ---");
 
-// --- AND Operator (&&) ---
-let isAdult = true;
-let hasLicense = false;
-let canDrive = isAdult && hasLicense;
-let canDriveElement = document.querySelector("#logical-operators-container > #and-operator");
-canDriveElement.textContent = canDrive;
-
-// --- OR Operator (||) ---
-let hasMoney = true;
-let hasCard = false;
-let canPay = hasMoney || hasCard;
-let canPayElement = document.querySelector("#logical-operators-container > #or-operator");
-canPayElement.textContent = canPay;
-
-// --- NOT Operator (!) ---
-let isSleeping = true;
-let isAwake = !isSleeping;
-let isAwakeElement = document.querySelector("#logical-operators-container > #not-operator");
-isAwakeElement.textContent = isAwake;
-
-// --- SECTION 3: Control Flow (Conditionals) ---
+// --- SECTION 3: Control Flow (Conditionals) and logical operators---
 
 /**
  * Control flow statements determine the order in which instructions are executed.
@@ -119,15 +97,42 @@ isAwakeElement.textContent = isAwake;
  */
 
 console.log("\n--- SECTION 3: Control Flow (Conditionals) ---");
-let temperature = 25;
+let temperature = document.getElementById('control-flow-temperature').innerText;
+temperature = Number(temperature);
+let isRaining = document.getElementById('control-flow-raining').innerText;
+isRaining = isRaining == 'true'
+let simpleForecastElement = document.getElementById('control-flow-simple-forecast');
+let detailedForecastElement = document.getElementById('control-flow-detailed-forecast');
+let bbqForecastElement = document.getElementById('control-flow-bbq-forecast');
+
 
 if (temperature > 30) {
-  console.log("It's a hot day!");
+  simpleForecastElement.innerText = "It's a hot day!"
 } else if (temperature > 20) {
-  console.log("It's a warm day.");
+  simpleForecastElement.innerText = "It's a warm day."
 } else {
-  console.log("It's a cool day.");
+  simpleForecastElement.innerText = "It's a cool day."
 }
+
+// Logical Operators: && (AND), || (OR), ! (NOT)
+
+if (temperature > 20 && !isRaining) {
+  detailedForecastElement.innerText = "It's a hot and dry day"
+} else if (temperature > 20 && isRaining) {
+  detailedForecastElement.innerText = "It's a hot and rainy day"
+} else if (temperature < 20 && !isRaining) {
+   detailedForecastElement.innerText = "It's a cold and dry day"
+}
+debugger
+if (temperature < 20 || isRaining) {
+  bbqForecastElement.innerText = 'not a great day for a BBQ'
+} else {
+  bbqForecastElement.innerText = 'BBQ time!'
+
+}
+
+
+// TO DO continue here
 
 // --- SECTION 4: Functions ---
 
