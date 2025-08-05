@@ -135,6 +135,7 @@ if (temperature < 20 || isRaining) {
 // TO DO continue here
 
 // --- SECTION 4: Functions ---
+console.log("\n--- SECTION 4: Functions ---");
 
 /**
  * Functions are blocks of code designed to perform a particular task.
@@ -142,44 +143,46 @@ if (temperature < 20 || isRaining) {
  */
 
 // Function Declaration
-function greet(name) {
-  return "Hello, " + name + "!";
+
+let nameInput = document.getElementById('name-input');
+let nameOutput = document.getElementById('name-output');
+
+function greet(e) {
+  if (e.key == 'Enter') {
+  let message = greeter(e.target.value)
+  nameOutput.innerText = message
+  }
+
 }
-let myVar = greet("Sarah");
-console.log(myVar);
 
-console.log("\n--- SECTION 4: Functions ---");
-console.log(greet("Charlie"));
+function greeter(name) {
+  return "hello there my good friend " + name ;
+}
 
-function amIhappy(emotion) {
-  if (emotion == "happy") {
-    return true;
-  } else if (emotion == "sad") {
-    return false;
-  } else {
-    return "dont know";
+nameInput.addEventListener('keyup', greet)
+
+let feelInput = document.getElementById('feel-input');
+let feelOutput = document.getElementById('feel-output');
+
+function handleEmotion(e) {
+  if (e.key == 'Enter') {
+  let message = amIhappy(e.target.value)
+  feelOutput.innerText = message
   }
 }
 
-let myEmotion = amIhappy("happy");
+feelInput.addEventListener('keyup', handleEmotion)
 
-console.log("myEmotion: ", myEmotion);
+function amIhappy(emotion) {
+  if (emotion.includes("happy") || emotion.includes('good')) {
+    return "I am glad you are feeling well";
+  } else if (emotion.includes("sad")) {
+    return "It sounds like you don't feel great, try to be kind to yourself";
+  } else {
+    return "I'm not sure how you are feeling";
+  }
+}
 
-// Function Expression
-const add = function (a, b) {
-  return a + b;
-};
-console.log("Sum (5 + 7):", add(5, 7));
-
-// Arrow Functions (ES6+)
-// Concise syntax, especially for single expressions.
-const multiply = (x, y) => x * y;
-console.log("Product (4 * 6):", multiply(4, 6));
-
-const sayGoodbye = (name) => {
-  console.log(`Goodbye, ${name}!`); // Template literals (backticks) for easy string interpolation
-};
-sayGoodbye("David");
 
 // --- SECTION 5: Arrays ---
 
