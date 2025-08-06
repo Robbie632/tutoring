@@ -1,24 +1,31 @@
 :root{
     --backgound-color:white;
     --font-color: rgb(35, 33, 33);
+    --border-color: rgb(75, 67, 67);
+    --color-1: rgb(190, 219, 248);
+}
+.dark-mode {
+    --background-color: rgb(35, 33, 33);
+    --font-color: white; 
+    --border-color: rgb(138, 125, 125);
+    --color-1: rgb(69, 94, 120);
+}
+h1 {
+    text-align: center;
+    margin-top:3rem;
 }
 body {
     background-color: var(--background-color);
     color: var(--font-color);
     transition: background-color 0.3s ease;
 }
+header {
+    background-color: var(--color-1);
+}
 
 main {
     margin-left:100px;
     margin-right: 100px;
-}
-.dark-mode {
-    --background-color: rgb(35, 33, 33);
-    --font-color: white; 
-}
-h1 {
-    text-align: center;
-    margin-top:3rem;
 }
 h2 {
     text-align: left;
@@ -41,10 +48,18 @@ nav > a:hover {
     display: flex;
     flex-wrap: wrap;
     gap:3rem;
+    width:100%;
+    justify-content: center;
 }
 .card-container > div {
-    width:200px;
-    height: 100px;
-    border: 1px solid red;
-    
+    width:400px;
+    height: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container > div + .skill {
+    height:100px;
 }
