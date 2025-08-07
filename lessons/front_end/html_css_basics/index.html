@@ -11,17 +11,29 @@
 
 <body class="dark-mode">
     <header>
-        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="600x400 Placeholder Image"
-            preserveAspectRatio="xMidYMid meet" viewBox="0 0 600 400">
-            <rect width="100%" height="100%" fill="#cccccc"></rect>
-            <text x="50%" y="50%" font-family="sans-serif" font-size="100" fill="#666666" text-anchor="middle"
-                dominant-baseline="middle">Logo</text>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" width="200px"
+            version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+            <g>
+                <circle style="fill:#D1E5F5;" cx="256" cy="120.889" r="120.889" />
+                <path style="fill:#D1E5F5;"
+                    d="M412.444,512c31.418,0,56.889-25.471,56.889-56.889c0-117.82-95.514-213.333-213.333-213.333   S42.667,337.291,42.667,455.111c0,31.418,25.471,56.889,56.889,56.889H412.444z" />
+            </g>
+            <g>
+                <polygon style="fill:#B4D8F1;" points="255.999,241.778 255.999,241.778 256,241.778  " />
+                <path style="fill:#B4D8F1;"
+                    d="M376.889,120.889C376.889,54.124,322.765,0,256,0h-0.001v241.778H256   C322.765,241.778,376.889,187.654,376.889,120.889z" />
+                <path style="fill:#B4D8F1;"
+                    d="M256,241.778L256,241.778L255.999,512h156.446c31.418,0,56.889-25.471,56.889-56.889   C469.333,337.291,373.82,241.778,256,241.778z" />
+            </g>
         </svg>
         <div>
-            <label for="dark-mode-button">dark mode</label>
-            <input id="dark-mode-button" type="range" min="0" max=1>
+            <div class="label-input">
+
+                <label for="dark-mode-button">dark mode</label>
+                <input id="dark-mode-button" type="range" min="0" max=1>
+            </div>
         </div>
-    
+
         <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
                 href="#contact">Contact</a></nav>
     </header>
@@ -29,15 +41,19 @@
     <main>
         <h1>Smith's Portfolio</h1>
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quo mollitia voluptatum quidem adipisci dolores cumque natus perspiciatis. Perspiciatis enim ipsam dolor vitae. Hic quia aspernatur, corrupti quam dolores minima.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quo mollitia voluptatum quidem adipisci
+            dolores cumque natus perspiciatis. Perspiciatis enim ipsam dolor vitae. Hic quia aspernatur, corrupti quam
+            dolores minima.
 
         </p>
         <div id="about">
             <h2>About</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatibus iusto quas architecto ipsa fuga neque excepturi accusantium ipsam minima. Tempora velit beatae adipisci placeat mollitia necessitatibus ducimus excepturi quae.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatibus iusto quas architecto ipsa
+                fuga neque excepturi accusantium ipsam minima. Tempora velit beatae adipisci placeat mollitia
+                necessitatibus ducimus excepturi quae.
             </p>
-    
+
         </div>
         <div id="skills">
             <h2>Skills</h2>
@@ -93,12 +109,28 @@
         </div>
         <div id="contact">
             <h2>Contact</h2>
-            <h3>Contact Form</h3>
-            <form action=""></form>
+            <div class="center-block">
+                <form action="">
+                    <div class="label-input">
+                        <label for="">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="label-input">
+                        <label for="">Email Address</label>
+                        <input type="email">
+                    </div>
+                    <div class="label-input">
+                        <label for="">Message</label>
+                        <input type="text">
+                    </div>
+                    <input type="submit"></input>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
-        <p>footer placeholder</p>
+                <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+                href="#contact">Contact</a></nav>
     </footer>
 </body>
 

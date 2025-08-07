@@ -1,26 +1,84 @@
+/* 
+
+css selectors
+=============
+
+.my-class => css selector for elements with attribute class = my-class
+
+#my-id => css selector for elements with attribute id = my-id
+
+element-name => css selector for elements with the tag name element-name
+
+.parent .child => css selector for an element with class 'child' that is a descendant of an element with class 'parent'
+
+.parent > .child => css selector for an element with class 'child' that is a direct child of an element with class 'parent'
+
+.my-class:hover => css selector for an element with class 'my-class' when the user hovers over it
+
+button[type="submit"] => targets a button with attribute type = submit
+
+
+custom properties
+=================
+--my-var: css value ie '10px' or red etc
+background-color: var(--my-var) sets background color property to value of my-varr
+
+Box Model
+=========
+
+*/
+
+* {
+    box-sizing:border-box;
+}
 :root{
-    --backgound-color:white;
+    --background-color:white;
     --font-color: rgb(35, 33, 33);
     --border-color: rgb(75, 67, 67);
     --color-1: rgb(190, 219, 248);
+    --color-2: rgb(68, 68, 174);
+    --input-background:rgb(233, 233, 239);
+    
 }
 .dark-mode {
     --background-color: rgb(35, 33, 33);
     --font-color: white; 
     --border-color: rgb(138, 125, 125);
     --color-1: rgb(69, 94, 120);
+    --input-background:rgb(70, 70, 80);
+}
+#dark-mode-button {
+    width:70px;
+}
+#dark-mode-button:hover{
+    cursor: pointer;
 }
 h1 {
     text-align: center;
-    margin-top:3rem;
+    margin-top:6rem;
+    margin-bottom: 3rem;
+}
+h2 {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 body {
     background-color: var(--background-color);
     color: var(--font-color);
     transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: var(--color-1);
+    padding: 1.5rem;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+footer {
+    padding-top:100px;
+    padding-bottom: 50px;
 }
 
 main {
@@ -30,12 +88,22 @@ main {
 h2 {
     text-align: left;
 }
+
 nav {
     display: flex;
     flex-direction: row;
+}
+header nav {
     justify-content: end;
     gap:2rem;
     font-size: 1.5rem;  
+}
+
+footer nav {
+    justify-content: center;
+    gap:2.5rem;
+    font-size: 1rem;  
+
 }
 nav > a {
     color: var(--font-color);
@@ -60,6 +128,43 @@ nav > a:hover {
     flex-direction: column;
     align-items: center;
 }
-.card-container > div + .skill {
+.card-container > div.skill {
     height:100px;
 }
+.center-block{
+display: flex;
+flex-direction: column;
+align-items: center;
+width:100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width: 300px;
+}
+.label-input {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap:1rem;
+}
+form input {
+    height: 2rem;
+    background-color: var(--input-background);
+    color:var(--font-color);
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--color-2);
+    color: var(--font-color);
+    height:2rem;
+    border-radius: 10px;
+    width: 50%;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
