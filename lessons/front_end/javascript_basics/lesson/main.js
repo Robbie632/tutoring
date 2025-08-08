@@ -196,6 +196,16 @@ console.log("\n--- SECTION 5: Arrays ---");
 console.log("Fruits array:", fruits);
 console.log("First fruit:", fruits[0]); // Arrays are 0-indexed
 console.log("Number of fruits:", fruits.length);
+let shoppingListElement = document.getElementById('shopping-list');
+
+
+// Iterating over arrays
+console.log("\n--- SECTION 5: Iterating Arrays (for...of loop) ---");
+for (const fruit of fruits) {
+  let item = document.createElement('li');
+  item.innerText = fruit;
+  shoppingListElement.appendChild(item);
+}
 
 // Adding elements
 fruits.push("Date"); // Adds to the end
@@ -206,142 +216,6 @@ const removedFruit = fruits.pop(); // Removes from the end
 console.log("Removed fruit:", removedFruit);
 console.log("Fruits after pop:", fruits);
 
-// Iterating over arrays
-console.log("\n--- SECTION 5: Iterating Arrays (for...of loop) ---");
-for (const fruit of fruits) {
-  console.log(fruit);
-}
 
-// --- SECTION 6: Array `map()` and filter()  ---
-
-/**
- * The `map()` method creates a NEW array by calling a provided function
- * on every element in the calling array.
- */
-
-const numbers = [1, 2, 3, 4, 5];
-console.log("\n--- SECTION 6: Array map() ---");
-
-// Example 1: Double each number
-const doubledNumbers = numbers.map((number) => number * 2);
-console.log("Original numbers:", numbers);
-console.log("Doubled numbers (using map):", doubledNumbers); // Output: [2, 4, 6, 8, 10]
-
-// Example 2: Transform an array of objects
-const users = [
-  { id: 1, name: "Alice", age: 25 },
-  { id: 2, name: "Bob", age: 30 },
-  { id: 3, name: "Charlie", age: 28 },
-];
-
-
-const userNames = users.map((user) => user.name);
-console.log("User names (using map):", userNames); // Output: ["Alice", "Bob", "Charlie"]
-
-
-
-// --- SECTION 7: Array `map()` and filter()  ---
-
-/**
- * The `filter()` method creates a NEW array by calling a provided function
- * on every element in the calling array.
- */
-
-const tasks = [
-  "water plants",
-  "hoover",
-  "paint wall",
-  "change bulb",
-  "plant flowers",
-];
-console.log("\n--- SECTION 7: Array map() ---");
-
-// Example 1: Double each number
-const plants = tasks.filter((task) => task.includes("plant"));
-console.log("Original tasks:", tasks);
-console.log("plant tasks (using filter):", plants); // Output: ['water plants', 'plant flowers']
-
-// Example 2: filter an array of objects
-const students = [
-  { id: 1, name: "Alice", age: 50 },
-  { id: 2, name: "Bob", age: 20 },
-  { id: 3, name: "Charlie", age: 68 },
-];
-
-
-const olderStudents = students.filter((user) => user.age > 30);
-console.log("Older students (using filter):", olderStudents); // Outputs array of two objects
-
-// --- SECTION 8: Objects ---
-
-/**
- * Objects are collections of key-value pairs.
- * They are used to represent entities with properties.
- */
-
-const person = {
-  firstName: "Jane",
-  lastName: "Doe",
-  age: 28,
-  isStudent: false,
-  hobbies: ["reading", "hiking", "cooking"],
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    zip: "12345",
-  },
-};
-
-console.log("\n--- SECTION 8: Objects ---");
-console.log("Person object:", person);
-
-// Accessing properties (dot notation and bracket notation)
-console.log("First Name:", person.firstName);
-console.log("Age:", person["age"]); // Useful if property name is dynamic or has spaces/special chars
-
-// Modifying properties
-person.age = 29;
-console.log("Updated Age:", person.age);
-
-// Adding new properties
-person.email = "jane.doe@example.com";
-console.log("Person with email:", person);
-
-// Destructuring Objects (ES6+) - VERY common in React for props
-// Allows you to extract properties from objects into distinct variables.
-const { firstName, age: personAge, hobbies } = person; // Renaming 'age' to 'personAge'
-console.log("\n--- SECTION 7: Object Destructuring ---");
-console.log("Destructured firstName:", firstName);
-console.log("Destructured personAge:", personAge);
-console.log("Destructured hobbies:", hobbies);
-
-// Spread Syntax (...) for Objects (ES6+)
-// Useful for copying objects or merging them.
-const updatedPerson = { ...person, age: 30, occupation: "Engineer" };
-console.log("Updated Person (using spread):", updatedPerson);
-
-// --- SECTION 9: ES6+ Features  ---
-
-/**
- * Many modern JavaScript features (ES6, ES7, etc.)
- * We've already seen some (arrow functions, const/let, template literals, destructuring, spread).
- * Here are a couple more.
- */
-
-console.log("\n--- SECTION 8: ES6+ Features ---");
-
-// Ternary Operator (Conditional Operator)
-// A concise way to write if-else statements, often used in JSX.
-let isLoggedIn = true;
-let message = isLoggedIn ? "Welcome back!" : "Please log in.";
-console.log("Ternary Operator example:", message);
-
-// Default Parameters for Functions
-function sayHello(name = "Guest") {
-  console.log(`Hello, ${name}!`);
-}
-console.log("\nDefault Parameters:");
-sayHello("Eve");
-sayHello(); // Uses the default "Guest"
 
 // --- END OF FILE ---
