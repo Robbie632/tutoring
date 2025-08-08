@@ -1,6 +1,5 @@
 import loadQuizzes from "./quizzes.js";
 
-
 loadQuizzes();
 /**
  * JavaScript Basics
@@ -17,7 +16,9 @@ loadQuizzes();
  * In modern JavaScript, we primarily use `let` and `const`.
  */
 
-let variablesContainerNameElement = document.querySelector('#variables-container > #name')
+let variablesContainerNameElement = document.querySelector(
+  "#variables-container > #name"
+);
 // `let`: Used for variables whose values might change.
 let userName = "Alice";
 console.log("Initial userName:", userName);
@@ -29,8 +30,8 @@ variablesContainerNameElement.innerText = userName;
 // `const`: Used for variables whose values should not change once assigned.
 const appName = "🧑 My Profile";
 console.log("App Name:", appName);
-let profileHeader = document.getElementById('profile-header')
-profileHeader.innerText = appName
+let profileHeader = document.getElementById("profile-header");
+profileHeader.innerText = appName;
 // appName = "NewApp"; // This would cause an error! (TypeError: Assignment to constant variable.)
 
 /**
@@ -52,11 +53,15 @@ let favoriteFood; // Undefined (not yet assigned)
 console.log("\n--- SECTION 1: Data Types Examples ---");
 console.log("Type of userName:", typeof userName);
 console.log("Type of age:", typeof age);
-let variablesContainerAgeElement = document.querySelector('#variables-container > #age')
-variablesContainerAgeElement.innerText = age
+let variablesContainerAgeElement = document.querySelector(
+  "#variables-container > #age"
+);
+variablesContainerAgeElement.innerText = age;
 console.log("Type of isActive:", typeof isActive);
-let variablesContainerIsActiveElement = document.querySelector('#variables-container > #is-active')
-variablesContainerIsActiveElement.innerText = isActive
+let variablesContainerIsActiveElement = document.querySelector(
+  "#variables-container > #is-active"
+);
+variablesContainerIsActiveElement.innerText = isActive;
 console.log("Type of selectedColor:", typeof selectedColor); // Note: typeof null is 'object', which is a historical quirk
 console.log("Type of favoriteFood:", typeof favoriteFood);
 
@@ -70,24 +75,28 @@ console.log("Type of favoriteFood:", typeof favoriteFood);
 // Very important for control flow!
 console.log("\n--- SECTION 2: Comparison Operators ---");
 let firstComparison = 10 == 10;
-let firstComparisonElement = document.querySelector("#comparison-operators-container > #equal")
-firstComparisonElement.textContent = firstComparison
+let firstComparisonElement = document.querySelector(
+  "#comparison-operators-container > #equal"
+);
+firstComparisonElement.textContent = firstComparison;
 
 let secondComparison = 10 != 10;
-let secondComparisonElement = document.querySelector("#comparison-operators-container > #not-equal")
-secondComparisonElement.textContent = secondComparison
+let secondComparisonElement = document.querySelector(
+  "#comparison-operators-container > #not-equal"
+);
+secondComparisonElement.textContent = secondComparison;
 
 let thirdComparison = 10 > 5;
-let thirdComparisonElement = document.querySelector("#comparison-operators-container > #greater")
-thirdComparisonElement.textContent = thirdComparison
-
+let thirdComparisonElement = document.querySelector(
+  "#comparison-operators-container > #greater"
+);
+thirdComparisonElement.textContent = thirdComparison;
 
 let fourthComparison = 10 < 5;
-let fourthComparisonElement = document.querySelector("#comparison-operators-container > #less-than")
-fourthComparisonElement.textContent = fourthComparison
-
-
-
+let fourthComparisonElement = document.querySelector(
+  "#comparison-operators-container > #less-than"
+);
+fourthComparisonElement.textContent = fourthComparison;
 
 // --- SECTION 3: Control Flow (Conditionals) and logical operators---
 
@@ -97,40 +106,41 @@ fourthComparisonElement.textContent = fourthComparison
  */
 
 console.log("\n--- SECTION 3: Control Flow (Conditionals) ---");
-let temperature = document.getElementById('control-flow-temperature').innerText;
+let temperature = document.getElementById("control-flow-temperature").innerText;
 temperature = Number(temperature);
-let isRaining = document.getElementById('control-flow-raining').innerText;
-isRaining = isRaining == 'true'
-let simpleForecastElement = document.getElementById('control-flow-simple-forecast');
-let detailedForecastElement = document.getElementById('control-flow-detailed-forecast');
-let bbqForecastElement = document.getElementById('control-flow-bbq-forecast');
-
+let isRaining = document.getElementById("control-flow-raining").innerText;
+isRaining = isRaining == "true";
+let simpleForecastElement = document.getElementById(
+  "control-flow-simple-forecast"
+);
+let detailedForecastElement = document.getElementById(
+  "control-flow-detailed-forecast"
+);
+let bbqForecastElement = document.getElementById("control-flow-bbq-forecast");
 
 if (temperature > 30) {
-  simpleForecastElement.innerText = "It's a hot day!"
+  simpleForecastElement.innerText = "It's a hot day!";
 } else if (temperature > 20) {
-  simpleForecastElement.innerText = "It's a warm day."
+  simpleForecastElement.innerText = "It's a warm day.";
 } else {
-  simpleForecastElement.innerText = "It's a cool day."
+  simpleForecastElement.innerText = "It's a cool day.";
 }
 
 // Logical Operators: && (AND), || (OR), ! (NOT)
 
 if (temperature > 20 && !isRaining) {
-  detailedForecastElement.innerText = "It's a hot and dry day"
+  detailedForecastElement.innerText = "It's a hot and dry day";
 } else if (temperature > 20 && isRaining) {
-  detailedForecastElement.innerText = "It's a hot and rainy day"
+  detailedForecastElement.innerText = "It's a hot and rainy day";
 } else if (temperature < 20 && !isRaining) {
-   detailedForecastElement.innerText = "It's a cold and dry day"
+  detailedForecastElement.innerText = "It's a cold and dry day";
 }
-debugger
+debugger;
 if (temperature < 20 || isRaining) {
-  bbqForecastElement.innerText = 'not a great day for a BBQ'
+  bbqForecastElement.innerText = "not a great day for a BBQ";
 } else {
-  bbqForecastElement.innerText = 'BBQ time!'
-
+  bbqForecastElement.innerText = "BBQ time!";
 }
-
 
 // TO DO continue here
 
@@ -144,37 +154,40 @@ console.log("\n--- SECTION 4: Functions ---");
 
 // Function Declaration
 
-let nameInput = document.getElementById('name-input');
-let nameOutput = document.getElementById('name-output');
+let nameInput = document.getElementById("name-input");
+let nameOutput = document.getElementById("name-output");
 
 function greet(e) {
-  if (e.key == 'Enter') {
-  let message = greeter(e.target.value)
-  nameOutput.innerText = message
+  if (e.key == "Enter") {
+    let message = greeter(e.target.value);
+    nameOutput.innerText = message;
   }
-
 }
 
 function greeter(name) {
-  return "hello there my good friend " + name ;
+  return "hello there my good friend " + name;
 }
 
-nameInput.addEventListener('keyup', greet)
+// exercise
+// can you change the above function so that if
+// the name was James it would return 'James, good to see you'
 
-let feelInput = document.getElementById('feel-input');
-let feelOutput = document.getElementById('feel-output');
+nameInput.addEventListener("keyup", greet);
+
+let feelInput = document.getElementById("feel-input");
+let feelOutput = document.getElementById("feel-output");
 
 function handleEmotion(e) {
-  if (e.key == 'Enter') {
-  let message = amIhappy(e.target.value)
-  feelOutput.innerText = message
+  if (e.key == "Enter") {
+    let message = amIhappy(e.target.value);
+    feelOutput.innerText = message;
   }
 }
 
-feelInput.addEventListener('keyup', handleEmotion)
+feelInput.addEventListener("keyup", handleEmotion);
 
 function amIhappy(emotion) {
-  if (emotion.includes("happy") || emotion.includes('good')) {
+  if (emotion.includes("happy") || emotion.includes("good")) {
     return "I am glad you are feeling well";
   } else if (emotion.includes("sad")) {
     return "It sounds like you don't feel great, try to be kind to yourself";
@@ -183,6 +196,9 @@ function amIhappy(emotion) {
   }
 }
 
+// exercises
+// can you change the above function so that it is more robust
+// for example what is a user enters I feel down today or i feel upbeat today
 
 // --- SECTION 5: Arrays ---
 
@@ -192,30 +208,27 @@ function amIhappy(emotion) {
  */
 
 const fruits = ["Apple", "Banana", "Cherry"];
-console.log("\n--- SECTION 5: Arrays ---");
-console.log("Fruits array:", fruits);
-console.log("First fruit:", fruits[0]); // Arrays are 0-indexed
-console.log("Number of fruits:", fruits.length);
-let shoppingListElement = document.getElementById('shopping-list');
 
+let shoppingListElement = document.getElementById("shopping-list");
 
 // Iterating over arrays
 console.log("\n--- SECTION 5: Iterating Arrays (for...of loop) ---");
 for (const fruit of fruits) {
-  let item = document.createElement('li');
+  let item = document.createElement("li");
   item.innerText = fruit;
   shoppingListElement.appendChild(item);
 }
 
-// Adding elements
-fruits.push("Date"); // Adds to the end
-console.log("Fruits after push:", fruits);
 
-// Removing elements
-const removedFruit = fruits.pop(); // Removes from the end
-console.log("Removed fruit:", removedFruit);
-console.log("Fruits after pop:", fruits);
+const fruits2 = ["Mango", "Apple", "Rasperries"];
+let shoppingListElement2 = document.getElementById("shopping-list-2");
 
 
+for (let index = 0; index < fruits2.length; index++) {
+  const fruit = fruits2[index];
+  let item = document.createElement("li");
+  item.innerText = fruit;
+  shoppingListElement2.appendChild(item);
 
+}
 // --- END OF FILE ---
