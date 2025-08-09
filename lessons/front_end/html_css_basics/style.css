@@ -1,8 +1,25 @@
 /* 
+Introduction to CSS
+===================
+
+CSS is a language for styling HTML elements using the followuing format
+
+css selector {
+    property: value
+}
+
+for example, ake the following CSS rule ...
+
+.my-card {
+    background-color: red;
+}
+
+.my-card is the css selector, this specificies what html element to style
+background-color is the property, i.e what to change
+red is thh value, this sets the style
 
 css selectors
-=============
-
+===================
 .my-class => css selector for elements with attribute class = my-class
 
 #my-id => css selector for elements with attribute id = my-id
@@ -20,15 +37,24 @@ element-name => css selector for elements with the tag name element-name
 button[type="submit"] => targets a button with attribute type = submit
 
 
+Properties
+===================
+These are the style properties that can be changed, examples include color, background-color, height, width, border etc...
+
+
+Values
+===================
+These are the possible values that the properties can be styled with, acceptable values depend on the property but examples include 100px, red, justify-content.
+
+
 custom properties
-=================
+===================
 --my-var: css value ie '10px' or red etc
 background-color: var(--my-var) sets background color property to value of my-varr
 
 
 Box Model
-=========
-
+===================
 Every element is a rectangular box. The box model defines how an element's content, 
 padding, border, and margin are rendered. The content is the innermost part, surrounded 
 by padding, which is a transparent area that creates space between the content and the border. 
@@ -36,6 +62,9 @@ The border wraps the padding and content, and finally, the margin is the transpa
 that creates space between the element and other elements. The box-sizing property, when set to 
 border-box, changes the default behavior, making the width and height properties include the 
 padding and border, simplifying layout calculations.
+
+[recommended] box-sizing: border-box => width = content + padding + border
+[default]     box-sizing: content-box => width = content
 
 */
 
@@ -107,9 +136,6 @@ header nav {
     justify-content: end;
     gap:2rem;
     font-size: 1.5rem;  
-}
-footer{
-
 }
 footer nav {
     justify-content: center;
