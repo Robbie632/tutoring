@@ -41,6 +41,28 @@ Properties
 ===================
 These are the style properties that can be changed, examples include color, background-color, height, width, border etc...
 
+Below are a list of properties that I find myself using often and I think you can do a lot with just these, 
+details on each property can be found here: https://developer.mozilla.org/en-US/docs/Web/CSS/Properties:
+
+margin - sets the margin (also can be more specific with margin-top, margin-bottom, margin-left, margin-right)
+padding - sets the padding (also can be more specific with padding-top, padding-bottom, padding-left, padding-right)
+border - set the border ie 1px solid black
+border-radius - can make the element more rounded, useful for styling buttons etc.
+color - color of the font
+background-color - color of the background
+font-size - size of the font
+font-style - italic, bold etc
+display - controls layout i.e inline, block, flex
+height 
+width
+text-align how text should be aligned i.e over to the left, to the right or center
+font-family - this is a sequence of fonts that are attempted to be used by the browser, it tries to use the first and if it fails it uses the second and so on
+
+The following properties are only used on an element when display: flex is set
+    justify-content
+    align-items
+    gap
+
 
 Values
 ===================
@@ -69,7 +91,7 @@ padding and border, simplifying layout calculations.
 */
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 :root{
     --background-color:white;
@@ -98,6 +120,7 @@ h1 {
 h2 {
     margin-bottom: 2rem;
     margin-top: 4rem;
+    text-align: left;
 }
 body {
     background-color: var(--background-color);
@@ -109,8 +132,8 @@ body {
 header {
     background-color: var(--color-1);
     padding: 1.5rem;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
 
 }
 footer {
@@ -123,9 +146,6 @@ footer {
 main {
     margin-left:100px;
     margin-right: 100px;
-}
-h2 {
-    text-align: left;
 }
 
 nav {
