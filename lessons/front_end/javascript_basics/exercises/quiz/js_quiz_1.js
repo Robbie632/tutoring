@@ -18,7 +18,6 @@
 // ========================================================================================
 // SECTION 1: VARIABLES & DATA TYPES
 // ========================================================================================
-
 /*
   QUESTION 1:
   Declare a variable named 'studentName' and assign it your name as a string.
@@ -35,10 +34,9 @@
 
 /*
   QUESTION 3:
-  Declare a variable named 'isJavaScriptFun' and assign it a boolean value of 'true'.
+  Declare a variable named 'isJavaScriptFun' and assign it a boolean value of true.
 */
 // YOUR ANSWER HERE:
-
 
 /*
   QUESTION 4:
@@ -52,6 +50,7 @@
   Change the value of 'favoriteNumber' to 7. Use the variable name, not the 'let' or 'const' keyword.
 */
 // YOUR ANSWER HERE:
+
 
 
 // ========================================================================================
@@ -73,12 +72,21 @@
 // YOUR ANSWER HERE:
 
 
+
 /*
   QUESTION 8:
-  Declare a function named 'add' that takes two arguments, 'num1' and 'num2', and
+  Declare/define a function named 'add' that takes two arguments, 'num1' and 'num2', and
   returns their sum.
 */
 // YOUR ANSWER HERE:
+
+
+// write a function called app that returns a string div element '<div>hello</div>'
+
+// add paramater name to the function
+
+
+// call the function and store the result as myElement
 
 
 /*
@@ -96,7 +104,7 @@
 /*
   QUESTION 10:
   Declare a variable named 'isAdult' and assign it a boolean value that is true if
-  'age' is greater than or equal to 18, and false otherwise.
+  'age' is greater than 18, and false otherwise.
 */
 // YOUR ANSWER HERE:
 
@@ -107,7 +115,6 @@
   and the condition that 'age' is less than 100 using the logical AND operator (&&).
 */
 // YOUR ANSWER HERE:
-
 
 /*
   QUESTION 12:
@@ -134,10 +141,20 @@
   QUESTION 14:
   Write an 'if-else-if' statement to check the 'age' variable.
   - If 'age' is less than 13, log "You are a child."
-  - If 'age' is between 13 and 19 (inclusive), log "You are a teenager."
+  - else If 'age' is between 13 and 19, log "You are a teenager."
   - Otherwise, log "You are an adult."
 */
 // YOUR ANSWER HERE:
+
+
+
+// define a variable for a category of music
+// if category is equal to gospel then log This is awesome
+// else if category is equal to pop then log its meh
+
+// else if category rock log i dont like it
+// else 'i dont know'
+
 
 
 /*
