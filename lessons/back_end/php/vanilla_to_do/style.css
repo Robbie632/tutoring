@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+button {
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor:pointer;
+}
+.container {
+    width:600px;
+    border: 1px solid black;
+margin: auto;
+padding: 3rem;
+}
+h1 {
+    text-align: center;
+}
