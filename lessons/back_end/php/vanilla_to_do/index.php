@@ -1,9 +1,20 @@
 <?php
 session_start();
-$item =  $_POST['item'];
-if (!is_null($item)) {
-    $_SESSION['to_do_item'] = $item;
+
+if (!isset($_SESSION['to_do'])) {
+    $_SESSION['to_do'] = [];
 }
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['item'])) {
+        $item = $_POST['item'];
+        $itemArray =['time' => time(), 'item'=> $item]; 
+        $_SESSION['to_do'][] = $itemArray;
+        // below needed otherwise upon refresh data will be posted again
+        header('Location: ' . 'index.php');
+    } 
+}
+
 ?>
 
 <html>
@@ -28,9 +39,10 @@ if (!is_null($item)) {
             <input type="submit" value="add item">
         </form>
         <ul>
-            <li>item 1</li>
             <?php
-            echo "<li>" . $_SESSION['to_do_item'] . "</li>"
+            foreach ($_SESSION['to_do'] as $item) {
+                echo "<li>" . $item['item'] . "</li>";
+            }
             ?>
         </ul>
     </div>
