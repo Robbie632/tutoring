@@ -1,0 +1,112 @@
+/* Google-inspired color palette */
+:root {
+    --google-blue: #4285F4;
+    --google-green: #34A853;
+    --google-yellow: #FBBC05;
+    --google-red: #EA4335;
+    --google-grey-100: #F1F3F4;
+    --google-grey-600: #5F6368;
+    --google-shadow: rgba(60, 64, 67, 0.15);
+}
+
+/* Global Styles */
+body {
+    /* Use a simple, clean font common in Google's products */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--google-grey-100);
+    color: #3C4043; /* Dark gray for text */
+}
+
+/* Container for the weather app */
+.container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 1px 3px 0 var(--google-shadow), 0 4px 8px 3px var(--google-shadow);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.3s ease;
+}
+
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    font-weight: 400; /* Lighter font weight for a modern look */
+    color: #202124;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Sub-paragraph styling */
+p {
+    font-size: 0.9em;
+    color: var(--google-grey-600);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Loading state styles */
+#loading {
+    font-size: 1em;
+    font-style: italic;
+    color: var(--google-blue);
+    animation: pulse 1.5s infinite ease-in-out;
+    margin-top: 20px;
+}
+
+/* Simple animation for the loading text to give a sense of activity */
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Weather data display */
+#weather-data {
+    margin-top: 20px;
+    border-top: 1px solid #E8EAED;
+    padding-top: 20px;
+}
+
+#weather-data h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 15px;
+}
+
+#weather-data p {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #3C4043;
+}
+
+/* Highlighted text for data points */
+#weather-data strong {
+    font-weight: 700;
+    color: #202124;
+}
+
+/* Additional styling for the client-server emphasis paragraph */
+.container p:first-of-type strong {
+    color: var(--google-blue);
+    font-weight: 700;
+}
+button {
+    padding:0.5rem;
+    color:var(--google-blue);
+    border-radius: 0.5rem;
+    border:1px solid #878889;
+    margin-top: 2rem;;
+}
+button:hover {
+    cursor: pointer;
+}
