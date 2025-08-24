@@ -1,8 +1,24 @@
 <?php
 session_start();
 
+
+
 if (!isset($_SESSION['to_do'])) {
     $_SESSION['to_do'] = [];
+}
+
+function delete($id) {
+    if (isset($_SESSION['to_do'])) {
+        $_SESSION['to_do']= array_filter($_SESSION['to_do'], fn($value) => $value['time']!==$id);
+    
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+    $uri_eploded = explode('/', $_SERVER['REQUEST_URI']);
+    $id = (int) $uri_eploded[2];
+    delete($id);
+    http_response_code(204);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -11,9 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $itemArray =['time' => time(), 'item'=> $item]; 
         $_SESSION['to_do'][] = $itemArray;
         // below needed otherwise upon refresh data will be posted again
-        header('Location: ' . 'index.php');
+        header('Location: /index');
     } 
 }
+
+
 
 ?>
 
@@ -41,11 +59,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <ul>
             <?php
             foreach ($_SESSION['to_do'] as $item) {
-                echo "<li>" . $item['item'] . "</li>";
+                $text = $item['item'];
+                $id = $item['time'];
+
+                echo "<li class='todo'>$text<button class='delete' id='$id'>delete</button></li>";
             }
             ?>
         </ul>
     </div>
 </body>
+<script type="module" src="./main.js"></script>
 
 </html>
