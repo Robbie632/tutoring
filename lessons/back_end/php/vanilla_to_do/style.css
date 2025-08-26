@@ -1,32 +1,137 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f7; /* A very light gray-blue for a soft background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
     box-sizing: border-box;
 }
-button {
-    border-radius: 10px;
-    border: 1px solid black;
-    cursor:pointer;
-}
+
 .container {
-    width:600px;
-    border: 1px solid black;
-margin: auto;
-padding: 3rem;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
 }
+
+
+
+/* Typography */
 h1 {
     text-align: center;
+    color: #1e5a3c; /* A deep, rich forest green */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Form & Inputs */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: none; /* Hide the label for a cleaner look */
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #388e3c; /* A slightly brighter green on focus */
+    box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.2);
+}
+
+input[type="submit"] {
+    background-color: #1e5a3c;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+/* To-Do List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .todo {
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
-    width:200px;
-    border: 1px solid blue;
-    padding:0.5rem;
-
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #1e5a3c;
+    font-size: 1.1em;
+    color: #444;
+    transition: all 0.3s ease;
 }
-ul {
-    display:flex;
-    flex-direction: column;
-    gap:0.5rem;
+
+
+.delete {
+    background-color: #dc3545; /* A standard red for delete */
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    form {
+        flex-direction: column;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
 }
