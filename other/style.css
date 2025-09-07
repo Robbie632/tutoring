@@ -1,0 +1,81 @@
+:root {
+    --background : rgb(26, 26, 40);
+    --text-color-1: rgb(235, 237, 245);
+    --text-color-2: rgb(76, 126, 232);
+    --size-1:22pt;
+    --size-2:34pt;
+    --size-3:124pt;
+    --size-2-5:40pt;
+    --height:297mm;
+    --width:210mm;
+    --spacer-1:30mm;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--text-color-1);
+    font-family: 'Caveat Brush';
+    height:var(--height);
+    width:var(--width);
+
+}
+.inner {
+    width:100%;
+    padding:40mm;
+}
+
+.hi {
+    font-size: var(--size-3);
+    margin-bottom: var(--spacer-1);
+}
+
+.question, .help {
+    font-size: var(--size-2);
+    margin-bottom:calc(var(--spacer-1)/2);
+}
+.help {
+        margin-bottom:var(--spacer-1);
+
+}
+
+
+.top-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.qr {
+    height:50mm;
+}
+.qr img {
+    height:100%;
+}
+.email, .name {
+    text-align: center;
+    font-size: var(--size-2-5);
+}
+.email {
+    margin-bottom: var(--spacer-1);
+        font-size: var(--size-1);
+}
+.color-2 {
+    color:var(--text-color-2);
+}
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+
+
+}
+.skills-container > div {
+    padding:2mm;
+    font-size: var(--size-1);
+    background-color: var(--text-color-2);
+    border-radius: 3mm;
+
+}
