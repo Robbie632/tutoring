@@ -1,11 +1,12 @@
 :root {
-    --background : rgb(26, 26, 40);
+    --background : rgb(16, 16, 25);
     --text-color-1: rgb(235, 237, 245);
-    --text-color-2: rgb(76, 126, 232);
+    --text-color-2: rgb(90, 138, 242);
     --size-1:22pt;
-    --size-2:34pt;
+    --size-2:44pt;
     --size-3:124pt;
-    --size-2-5:40pt;
+    --size-2-2:35pt;
+    --size-2-5:50pt;
     --height:297mm;
     --width:210mm;
     --spacer-1:30mm;
@@ -58,7 +59,7 @@ body {
 }
 .email {
     margin-bottom: var(--spacer-1);
-        font-size: var(--size-1);
+        font-size: var(--size-2-2);
 }
 .color-2 {
     color:var(--text-color-2);
@@ -79,3 +80,4 @@ body {
     border-radius: 3mm;
 
 }
+
