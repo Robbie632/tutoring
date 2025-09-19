@@ -7,9 +7,10 @@
     --size-3:124pt;
     --size-2-2:35pt;
     --size-2-5:50pt;
+    --size-name:90pt;
     --height:297mm;
     --width:210mm;
-    --spacer-1:30mm;
+    --spacer-1:20mm;
 }
 
 
@@ -55,7 +56,10 @@ body {
 }
 .email, .name {
     text-align: center;
-    font-size: var(--size-2-5);
+}
+.name {
+    
+    font-size: var(--size-name);
 }
 .email {
     margin-bottom: var(--spacer-1);
@@ -67,15 +71,15 @@ body {
 .skills-container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     margin: auto;
     justify-content: space-around;
 
 
 }
 .skills-container > div {
-    padding:2mm;
-    font-size: var(--size-1);
+    padding:3mm;
+    font-size: calc(var(--size-1)*1.2);
     background-color: var(--text-color-2);
     border-radius: 3mm;
 
