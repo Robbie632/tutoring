@@ -29,7 +29,7 @@ const subjects = [
       "Semantic elements- h1, h2, div, p, section, input, ul, ol",
       "Document object model (DOM)"
     ],
-    progress: 70,
+    progress: 100,
     recommended_progress: 80,
     prerequisites : ['Setup']
   },
@@ -43,7 +43,7 @@ const subjects = [
       "CSS variables",
       "Responsive design",
     ],
-    progress: 20,
+    progress: 70,
     recommended_progress: 95,
     prerequisites : ['Setup', 'HTML']
   },
@@ -56,8 +56,8 @@ const subjects = [
       "Control Flow",
       "Control structures",
     ],
-    progress:0,
-    recommended_progress: 95,
+    progress:60,
+    recommended_progress: 70,
     prerequisites : ['Setup']
   },
   {
@@ -82,7 +82,7 @@ const subjects = [
       "Custom events",
       "Preventing default actions",
     ],
-     progress:70,
+     progress:80,
     recommended_progress: 95,
     prerequisites : ['Setup', 'HTML', 'JavaScript']
   },
@@ -113,7 +113,7 @@ const subjects = [
       "HTTP basics",
       "Request/response cycle",
     ],
-    progress:80,
+    progress:20,
     recommended_progress: 95,
     prerequisites : ['Setup']
   },
