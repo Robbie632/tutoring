@@ -8,3 +8,16 @@ document.addEventListener('click', (e) => {
     }
 
 })
+
+document.addEventListener('keyup', (e) => {
+    if (e.target.classList.contains('add') && e.key=='Enter') {
+        alert('pressed enter')
+    };
+
+})
+
+document.addEventListener('focusout', (e) => {
+    if (e.target.classList.contains('add')) {
+        alert('lost focus')
+    }
+})

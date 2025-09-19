@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $text = $item['item'];
                 $id = $item['time'];
 
-                echo "<li class='todo'>$text<button class='delete' id='$id'>delete</button></li>";
+                echo "<li class='todo'><input class='add' type='text' value='$text'></input></form><button class='delete' id='$id'>delete</button></li>";
             }
             ?>
         </ul>
