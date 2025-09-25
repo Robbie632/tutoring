@@ -1,14 +1,17 @@
+:root {
+    --image-height: 700px;
+}
 .carousel {
-    width:500px;
-    height:500px;
+    width:var(--image-height);
+    height:var(--image-height);
     overflow:hidden;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
     transform-style: preserve-3d; /* Prepares for potential 3D effects on image-container */
 }
 img {
-    width:500px;
-    height:500px;
+    width:var(--image-height);
+    height:var(--image-height);
     object-fit: cover;
 
 }
