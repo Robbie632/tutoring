@@ -1,16 +1,47 @@
 :root {
-    --background : rgb(16, 16, 25);
-    --text-color-1: rgb(235, 237, 245);
-    --text-color-2: rgb(90, 138, 242);
-    --size-1:22pt;
-    --size-2:44pt;
-    --size-3:124pt;
-    --size-2-2:35pt;
-    --size-2-5:50pt;
-    --size-name:90pt;
-    --height:297mm;
-    --width:210mm;
-    --spacer-1:20mm;
+    --background : rgb(13, 13, 20);
+    --text-color-2: rgb(212, 217, 236);
+    --text-color-1: rgb(131, 163, 232);
+    --size-1-base:22pt;
+    --size-2-base:44pt;
+    --size-3-base:124pt;
+    --size-2-2-base:35pt;
+    --size-2-5-base:50pt;
+    --size-name-base:70pt;
+    --width-base:210mm;
+    --spacer-1-base:20mm;
+    --qr-height-base:50mm;
+    --skill-padding-base:3mm;
+    --inner-padding-base: 40mm;
+}
+.a4{
+    --size-1:var(--size-1-base);
+    --size-2:var(--size-2-base);
+    --size-3:var(--size-3-base);
+    --size-2-2:var(--size-2-2-base);
+    --size-2-5:var(--size-2-5-base);
+    --size-name:var(--size-name-base);
+    --height:95vh;
+    --width:var(--width-base);
+    --spacer-1:var(--spacer-1-base);  
+    --qr-height:var(--qr-height-base);  
+    --skill-padding:var(--skill-padding-base);
+    --inner-padding:var(--inner-padding-base);
+}
+.a5 {
+    --scale-factor:0.65;
+    --size-1:calc(var(--size-1-base)*var(--scale-factor));
+    --size-2:calc(var(--size-2-base)*var(--scale-factor));
+    --size-3:calc(var(--size-3-base)*var(--scale-factor));
+    --size-2-2:calc(var(--size-2-2-base)*var(--scale-factor));
+    --size-2-5:calc(var(--size-2-5-base)*var(--scale-factor));
+    --size-name:calc(var(--size-name-base)*var(--scale-factor));
+    --height: 95vh;
+    --width: 148mm;
+    --spacer-1:calc(var(--spacer-1-base)*var(--scale-factor));  
+    --qr-height:calc(var(--qr-height-base)* var(--scale-factor));    
+    --skill-padding:calc(var(--skill-padding-base)*var(--scale-factor));
+    --inner-padding:20mm;
 }
 
 
@@ -20,11 +51,14 @@ body {
     font-family: 'Caveat Brush';
     height:var(--height);
     width:var(--width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 .inner {
     width:100%;
-    padding:40mm;
+    padding:0 var(--inner-padding);
 }
 
 .hi {
@@ -49,7 +83,7 @@ body {
 
 }
 .qr {
-    height:50mm;
+    height:var(--qr-height);
 }
 .qr img {
     height:100%;
@@ -64,6 +98,13 @@ body {
 .email {
     margin-bottom: var(--spacer-1);
         font-size: var(--size-2-2);
+        color: var(--text-color-2);
+}
+.website {
+            font-size: var(--size-2-2);
+            text-align: center;
+            color:var(--text-color-2)
+
 }
 .color-2 {
     color:var(--text-color-2);
@@ -78,10 +119,11 @@ body {
 
 }
 .skills-container > div {
-    padding:3mm;
+    padding:var(--skill-padding);
     font-size: calc(var(--size-1)*1.2);
-    background-color: var(--text-color-2);
+    background-color: var(--text-color-1);
     border-radius: 3mm;
+    color:var(--background)
 
 }
 
