@@ -1,0 +1,205 @@
+/*
+ * Bristol Plant Shop Stylesheet
+ * Inspired by modern, independent, and slightly bohemian aesthetics.
+ */
+
+:root {
+  /* Color Palette - Earthy and Modern */
+  --color-primary: #1e3b1c; /* Deep Green - Plant/Branding Color */
+  --color-secondary: #f4f2e9; /* Off-White/Cream - Background Paper Texture */
+  --color-accent: #e88d44; /* Terracotta Orange - Accent for buttons/links */
+  --color-text: #333333; /* Dark Grey for readability */
+  --color-light-text: #a8a8a8; /* Light grey for subtle text */
+
+  /* Typography - Clean and Readable */
+  --font-heading: 'Bad Script', Arial, sans-serif;
+  --font-body: 'Bad Script', serif; /* A touch of classic warmth */
+
+  /* Spacing */
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 32px;
+  --space-xl: 64px;
+}
+
+/* Global Reset and Body Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  line-height: 1.6;
+  padding: var(--space-m); /* Global padding for a slight border effect */
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-light-text);
+  margin-bottom: var(--space-l);
+}
+
+.header h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: var(--space-s);
+}
+
+.header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-text);
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* Cart Icon/Placeholder */
+.cart {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: var(--space-s) var(--space-m);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cart:hover {
+scale: 1.2;
+}
+
+/* Product List */
+ul {
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:80px;
+  justify-content: center;
+  margin-top: var(--space-xl)
+}
+
+/* Individual Product Item */
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-l);
+  width:400px;
+  border: 1px solid var(--color-light-text);
+  background-color: white; /* Make items pop against the cream background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle lift */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+li h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  text-transform: capitalize;
+  margin-bottom: var(--space-m);
+  font-weight: 700;
+}
+
+/* Add to Cart Button */
+li button {
+  
+  border: none;
+  padding: var(--space-s) var(--space-l);
+  margin-top: auto; /* Pushes button to the bottom */
+  border-radius: 10px; /* Pill shape for a modern feel */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+li button:hover {
+  transform: translateY(-1px);
+}
+
+li button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Media Query for smaller screens (mobile first approach) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header > div {
+    margin-bottom: var(--space-m);
+  }
+  .cart {
+    margin-top: var(--space-s);
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  body {
+    padding: var(--space-s);
+  }
+}
+
+.cart > img {
+  height:80px;
+}
+
+.hidden {
+  display:none
+}
+
+.modal-backdrop {
+
+      /* Critical for positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Layering above everything else */
+    z-index: 1000;
+    
+    /* Initial state: Hidden */
+    display: none; /* or visibility: hidden; opacity: 0; */
+    
+    /* Styling the dark backdrop */
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+    /* Center the content */
+    display: flex; /* Will be toggled to flex when shown */
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+      /* Makes the modal container appear on top of the backdrop */
+    z-index: 1001; 
+    /* Ensures it doesn't fill the whole screen */
+    background: white;
+    padding: 100px;
+    border-radius: 8px;
+    /* Optional: box-shadow for depth */
+}
