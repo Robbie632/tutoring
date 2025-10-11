@@ -19,7 +19,7 @@ const subjects = [
       "Your portfolio will be the platform by which you can show all your projects",
       "It shall be deployed using Github actions"
     ],
-    progress: 30,
+    progress: 40,
     recommended_progress: null,
     prerequisites : ['Setup']
   },
@@ -102,7 +102,7 @@ const subjects = [
       "Starting projects",
       "Installing and using packages",
     ],
-    progress:0,
+    progress:10,
     recommended_progress: 95,
     prerequisites : ['Setup']
   },
@@ -153,7 +153,7 @@ const subjects = [
       "States",
       "Effects"
     ],
-    progress:0,
+    progress:10,
     recommended_progress: null,
     prerequisites : ['Setup', 'HTML', 'Styling', 'Javascript', 'Javascript - Advanced', 'NPM and project scaffolding']
   },

@@ -1,4 +1,4 @@
-import {subjects} from './config';
+import {subjects} from './backend/config';
 debugger
 document.addEventListener("click", function (e) {
   if (e.target.closest(".card")) {
