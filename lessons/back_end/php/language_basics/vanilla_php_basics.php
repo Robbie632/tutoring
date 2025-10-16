@@ -10,7 +10,7 @@ declare(strict_types=1);
 // }
 
 // ===============================
-// PHP Basics for Laravel Lesson 1 
+// PHP Basics
 // ===============================
 // PHP documentation: https://www.php.net/manual/en/index.php
 
