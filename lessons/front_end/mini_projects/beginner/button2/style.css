@@ -1,0 +1,37 @@
+
+/* No need to add to this file to complete the challenge */
+
+/* This CSS is most relevant to challenge */
+.dropdown {
+    border:1px solid black;
+    padding:0 20px;
+    border-radius: 10px;
+    width:500px;
+    overflow-y: auto;
+}
+.collapse {
+    overflow-y: hidden;
+    height:100px
+}
+
+
+/* This CSS is mjust to make things look better so not relevant to challenge */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:100px;
+}
+.dropdown-heading-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    padding:10px;
+    cursor: pointer;
+    height:50px;
+
+}
+
